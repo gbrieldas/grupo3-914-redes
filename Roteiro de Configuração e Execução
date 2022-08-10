@@ -1,3 +1,16 @@
 # Roteiro de Configuração e Execução de um ambiente de rede virtualizada.
-
-Criação das VMs
+<br>
+## Criação das VMs
+<br>
+## Configuração das VMs
+<br>
+### Update/Upgrade
+### sudo apt-get install openssh-server
+### Staus da Porta 22 (netstat -an | grep LISTEN.)
+### Firewall (sudo ufw allow ssh.) (sudo ufw enable)
+### sudo nano /etc/netplan/01-netcfg.yaml
+### sudo hostnamectl set-hostname srv-vm1-pc1
+### sudo nano /etc/hosts
+### adduser
+### Modo Bridge
+### Criação do HostOnly
