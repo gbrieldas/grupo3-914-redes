@@ -14,4 +14,4 @@ Integrantes: Gabriel, Rityelle, Miguel e Luiza.
 
 <p><center> Topologia da Rede</center></p>   
    <img src="imagens/topologia.png" alt=""
-	title="Topologia feita pelo Profº Alaelson"/>
+	title="Topologia feita pelo Professor Alaelson"/>
