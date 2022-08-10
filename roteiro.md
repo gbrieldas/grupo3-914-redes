@@ -123,6 +123,21 @@ sudo ufw enable
 
 ## Configuração da Interface de Rede
 
+```
+------------------------------------------------------------------------------------------------------------
+|  DESCRICAO  |       IP         |      hostname     |               FQDN               |      aliase      |
+------------------------------------------------------------------------------------------------------------
+| VM1-PC1     | 192.168.14.34    |   srv-vm1-pc1     | vm01-pc1.grupo3-914.ifalara.net  |       vpn        |
+| VM2-PC1     | 192.168.14.35    |   srv-vm2-pc1     | vm02-pc1.grupo3-914.ifalara.net  |       mail       |
+| VM1-PC2     | 192.168.14.36    |   srv-vm1-pc2     | vm01-pc2.grupo3-914.ifalara.net  |       www        |
+| VM2-PC2     | 192.168.14.37    |   srv-vm2-pc2     | vm02-pc2.grupo3-914.ifalara.net  |       file       |
+| VM1-PC3     | 192.168.14.38    |   srv-vm1-pc3     | vm01-pc3.grupo3-914.ifalara.net  |       sql        |
+| VM2-PC3     | 192.168.14.39    |   srv-vm2-pc3     | vm02-pc3.grupo3-914.ifalara.net  |       mint       |
+| VM1-PC4     | 192.168.14.40    |   srv-vm1-pc4     | vm01-pc4.grupo3-914.ifalara.net  |       beans      |
+| VM2-PC4     | 192.168.14.41    |   srv-vm2-pc4     | vm02-pc4.grupo3-914.ifalara.net  |       url        |
+------------------------------------------------------------------------------------------------------------
+```
+
 ### Configurar o IP Estático na Interface de Rede
 * Editar o arquivo YAML do Ubuntu, neste cado o ``01-netcfg.yaml``:
 ```
@@ -181,20 +196,44 @@ sudo netplan apply
 	title="ifconfig -a"/>
 
 ### Configurando a Placa de Rede para Modo Bridge:
+* Nesta etapa configuramos a placa de redes no Adaptador 1 em todas as VMs para o Modo Bridgo, assim como a imagem abaixo mostra:
 
 <p><center> Configurando a Placa de Rede para Modo Bridge na VM1 do PC4 </center></p>   
    <img src="imagens/gabriel/modo_bridge-VM1.png" alt=""
 	title="Modo Bridge"/>
 
-### sudo nano /etc/hosts
+## Criacão dos usuários nas VMs
+### Cada VM possui o usuário administrador, então criamos em cada VM mais 4 usuários com os nomes dos integrantes do grupo.
+* Para isso usamos o ``sudo adduser <usuario>``:
 
-### adduser
-* Em cada vm deve ter o usuário administrador e os usuários com os nomes dos integrantes do grupo.
+<p><center> Usuários criados nas VM1 e VM2 do PC1 </center></p>   
+   <img src="" alt=""
+	title="ifconfig -a"/>
+  
+<br>
 
-### Modo Bridge
+<p><center> Usuários criados nas VM1 e VM2 do PC2 </center></p>   
+   <img src="" alt=""
+	title="ifconfig -a"/>
+  
+<br>
 
-### Criação do HostOnly
+<p><center> Usuários criados nas VM1 e VM2 do PC3 </center></p>   
+   <img src="" alt=""
+	title="ifconfig -a"/>
+  
+<br>
 
-## Testes dde Ping e Acessso SSH
+<p><center> Usuários criados nas VM1 e VM2 do PC4 </center></p>   
+   <img src="" alt=""
+	title="ifconfig -a"/>
+  
+<br>
+
+sudo nano /etc/hosts
+
+### Configuração do HostOnly
+
+## Testes de Ping e Acessso SSH
 
 ###  Resultados dos testes de Ping e acesso SSH utilizando os usuários criados nas VMs e os nomes dos hosts.
