@@ -45,7 +45,7 @@ sudo chmod -R 771 /labredes
 ```
 
 ### Baixar a imagem OVA do Ubuntu Server
-* Baixar a imagem ``ubuntu-22.04-live-server-amd64.iso`` do PC do Professor Alaelson:
+* Baixar a imagem ``ubuntu-22.04-live-server-amd64.iso`` do PC do Professor Alaelson para o diretório ``/labredes/images/original``:
 ```
 scp aluno@192.168.101.10:~/Public/iso-images/ubuntu-server-mini.ova /labredes/images/original
 ```
@@ -57,9 +57,78 @@ sudo apt install virtualbox-ext-pack
 ```
 
 ### Criação e Configuração das VMs no VirtualBox
-* Nesta etapa criamos 
+#### Nesta etapa criamos todas as 8 VMs distribuídas nos 4 PCs.
+* Importamos o arquivo OVA a partir da opção ``Importar Appliance``; e
+* Definimos o diretório ``/VM/914/Gabriel``, no qual a VM foi salva.
 
 ## Configuração das VMs
+
+### Inicialização das VMs
+* Logar com o usuário ``administrador`` com a senha ``adminifal``.
+
+### Instalação das ferramentas de rede nas VMS
+```
+sudo apt install net-tools -y
+```
+
+## Configuração da Interface de Rede
+
+### Configurar o IP Estático na Interface de Rede
+* Editar o arquivo YAML do Ubuntu, neste cado o ``01-netcfg.yaml``:
+```
+sudo nano /etc/netplan/01-netcfg.yaml
+```
+
+<p><center> Configuração da Interface de Rede das VMs do PC1 </center></p>   
+   <img src="imagens/gabriel/netplan.png" alt=""
+	title="Arquivo 01-netcfg.yaml"/>
+  
+<br>
+
+<p><center> Configuração da Interface de Rede das VMs do PC2 </center></p>   
+   <img src="imagens/gabriel/netplan.png" alt=""
+	title="Arquivo 01-netcfg.yaml"/>
+  
+<br>
+
+<p><center> Configuração da Interface de Rede das VMs do PC3 </center></p>   
+   <img src="imagens/gabriel/netplan.png" alt=""
+	title="Arquivo 01-netcfg.yaml"/>
+  
+<br>
+
+<p><center> Configuração da Interface de Rede das VMs do PC4 </center></p>   
+   <img src="imagens/gabriel/netplan.png" alt=""
+	title="Arquivo 01-netcfg.yaml"/>
+  
+* Aplicando as configuraçães:
+```
+sudo netplan apply
+```
+ 
+* Configuração da Interface de Rede das VMs através do ``ifconfig -a``:
+
+<p><center> Configuração da Interface de Rede das VM1 do PC1 </center></p>   
+   <img src="imagens/luiza/ifconfig.png" alt=""
+	title="ifconfig -a"/>
+  
+<br>
+
+<p><center> Configuração da Interface de Rede das VM1 do PC3 </center></p>   
+   <img src="imagens/luiza/ifconfig.png" alt=""
+	title="ifconfig -a"/>
+  
+<br>
+
+<p><center> Configuração da Interface de Rede das VM2 do PC3 </center></p>   
+   <img src="imagens/luiza/ifconfig.png" alt=""
+	title="ifconfig -a"/>
+  
+<br>
+
+<p><center> Configuração da Interface de Rede das VM2 do PC4 </center></p>   
+   <img src="imagens/luiza/ifconfig.png" alt=""
+	title="ifconfig -a"/>
 
 ### Update/Upgrade
 
