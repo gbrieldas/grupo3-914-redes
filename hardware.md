@@ -3,4 +3,4 @@
 
 <p><center> Características de Hardware das VMS</center></p>   
    <img src="imagens/hardware.png" alt=""
-	title="Listagem da configuração de hardware na VM2-PC$"/>
+	title="Listagem da configuração de hardware na VM2-PC"/>
