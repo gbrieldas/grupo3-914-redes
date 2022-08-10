@@ -59,7 +59,7 @@ sudo apt install virtualbox-ext-pack
 ### Criação e Configuração das VMs no VirtualBox
 #### Nesta etapa criamos todas as 8 VMs distribuídas nos 4 PCs.
 * Importamos o arquivo OVA a partir da opção ``Importar Appliance``; e
-* Definimos o diretório ``/VM/914/Gabriel``, no qual a VM foi salva.
+* Definimos o diretório ``/VM/914/<Estudante>``, no qual a VM foi salva.
 
 ## Configuração das VMs
 
@@ -69,6 +69,56 @@ sudo apt install virtualbox-ext-pack
 ### Instalação das ferramentas de rede nas VMS
 ```
 sudo apt install net-tools -y
+```
+
+## SSH-Server
+
+### Atribuindo nome aos servidores ``hostname``, seguindo a tabela das VMs:
+```
+sudo hostnamectl set-hostname <hostname>
+```
+
+<p><center> Definindo o nome do hostname da VM1 e VM2 do PC1 </center></p>   
+   <img src="imagens/gabriel/hostname.png" alt=""
+	title="Definindo o nome do hostname"/>
+  
+<br>
+
+<p><center> Definindo o nome do hostname da VM1 e VM2 do PC2 </center></p>   
+   <img src="imagens/gabriel/hostname.png" alt=""
+	title="Definindo o nome do hostname"/>
+  
+<br>
+
+<p><center> Definindo o nome do hostname da VM1 e VM2 do PC3 </center></p>   
+   <img src="imagens/gabriel/hostname.png" alt=""
+	title="Definindo o nome do hostname"/>
+  
+<br>
+
+<p><center> Definindo o nome do hostname da VM1 e VM2 do PC4 </center></p>   
+   <img src="imagens/gabriel/hostname.png" alt=""
+	title="Definindo o nome do hostname"/>
+
+### Instalando o servidor SSH
+#### Nesta etapa instalamos e atualizamos as definições e versões de pacotes/bibliotecas dos repositórios do ubuntu, instalamos o SSH Server, verificamos os status das portas e o funcionamento de Firewall.
+* Atualizando os pacotes com as definições e versões:
+```
+sudo apt update
+sudo apt upgrade -y
+```
+* Instalando o SSH Server:
+```
+sudo apt-get install openssh-server
+```
+* Verificando o status das portas do sistema:
+```
+netstat -an | grep LISTEN.
+```
+* Configurando o Firewall:
+```
+sudo ufw allow ssh.
+sudo ufw enable
 ```
 
 ## Configuração da Interface de Rede
@@ -130,17 +180,11 @@ sudo netplan apply
    <img src="imagens/luiza/ifconfig.png" alt=""
 	title="ifconfig -a"/>
 
-### Update/Upgrade
+### Configurando a Placa de Rede para Modo Bridge:
 
-### sudo apt-get install openssh-server
-
-### Staus da Porta 22 (netstat -an | grep LISTEN.)
-
-### Firewall (sudo ufw allow ssh.) (sudo ufw enable)
-
-### sudo nano /etc/netplan/01-netcfg.yaml
-
-### sudo hostnamectl set-hostname srv-vm1-pc1
+<p><center> Configurando a Placa de Rede para Modo Bridge na VM1 do PC4 </center></p>   
+   <img src="imagens/gabriel/modo_bridge-VM1.png" alt=""
+	title="Modo Bridge"/>
 
 ### sudo nano /etc/hosts
 
