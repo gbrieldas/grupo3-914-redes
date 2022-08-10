@@ -6,7 +6,7 @@
 ## Criação das VMs
 
 ### Criação de Diretórios
-#### Criação dos diretórios que comportaram a imagem ISO e a VMs.
+#### Criação dos diretórios que comportaram a imagem OVA e a VMs.
 * Logar no usuário ``redes`` com a senha ``admin@Lab92``:
 ```
 su redes
@@ -44,10 +44,10 @@ sudo chgrp -R redes /labredes
 sudo chmod -R 771 /labredes
 ```
 
-### Baixar a imagem ISO do Ubuntu Server
+### Baixar a imagem OVA do Ubuntu Server
 * Baixar a imagem ``ubuntu-22.04-live-server-amd64.iso`` do PC do Professor Alaelson:
 ```
-scp aluno@192.168.101.10:~/Public/iso-images/ubuntu-22.04-live-server-amd64.iso /labredes/images/original
+scp aluno@192.168.101.10:~/Public/iso-images/ubuntu-server-mini.ova /labredes/images/original
 ```
 
 ### Instalar o Virtualbox Extension Pack
@@ -56,6 +56,8 @@ scp aluno@192.168.101.10:~/Public/iso-images/ubuntu-22.04-live-server-amd64.iso 
 sudo apt install virtualbox-ext-pack
 ```
 
+### Criação e Configuração das VMs no VirtualBox
+* Nesta etapa criamos 
 
 ## Configuração das VMs
 
