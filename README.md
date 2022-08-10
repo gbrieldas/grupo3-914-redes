@@ -11,3 +11,7 @@ Integrantes: Gabriel, Rityelle, Miguel e Luiza.
 * Realizar os testes de ping e acesso SSH utilizando os usuários criados nas VMs e os nomes dos hosts.
 * Listar a configuração de hardware utilizada em cada MV.
 * Apresentação do roteiro contendo o passo-a-passo de configuração e execução do ambiente de rede virtualiza.
+
+<p><center> Topologia da Rede</center></p>   
+   <img src="imagens/topologia.png" alt=""
+	title="Topologia feita pelo Profº Alaelson"/>
