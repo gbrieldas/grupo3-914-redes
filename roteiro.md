@@ -227,13 +227,51 @@ sudo netplan apply
 <p><center> Usuários criados nas VM1 e VM2 do PC4 </center></p>   
    <img src="" alt=""
 	title="ifconfig -a"/>
+
+## Configurando o serviço de nomes estático
+```
+------------------------------------------------------------------------------------------------------------
+|  DESCRICAO  |       IP         |      hostname     |               FQDN               |      aliase      |
+------------------------------------------------------------------------------------------------------------
+| VM1-PC1     | 192.168.14.34    |   srv-vm1-pc1     | vm01-pc1.grupo3-914.ifalara.net  |       vpn        |
+| VM2-PC1     | 192.168.14.35    |   srv-vm2-pc1     | vm02-pc1.grupo3-914.ifalara.net  |       mail       |
+| VM1-PC2     | 192.168.14.36    |   srv-vm1-pc2     | vm01-pc2.grupo3-914.ifalara.net  |       www        |
+| VM2-PC2     | 192.168.14.37    |   srv-vm2-pc2     | vm02-pc2.grupo3-914.ifalara.net  |       file       |
+| VM1-PC3     | 192.168.14.38    |   srv-vm1-pc3     | vm01-pc3.grupo3-914.ifalara.net  |       sql        |
+| VM2-PC3     | 192.168.14.39    |   srv-vm2-pc3     | vm02-pc3.grupo3-914.ifalara.net  |       mint       |
+| VM1-PC4     | 192.168.14.40    |   srv-vm1-pc4     | vm01-pc4.grupo3-914.ifalara.net  |       beans      |
+| VM2-PC4     | 192.168.14.41    |   srv-vm2-pc4     | vm02-pc4.grupo3-914.ifalara.net  |       url        |
+------------------------------------------------------------------------------------------------------------
+```
+* Editando os arquivo /etc/hosts conforme as definições da Tabela acima:
+```
+sudo nano /etc/hosts
+```
+
+<p><center> Arquivo /etc/hosts da VM1 e VM2 do PC1 </center></p>   
+   <img src="imagens/gabriel/hosts.png" alt=""
+	title="/etc/hosts"/>
   
 <br>
 
-sudo nano /etc/hosts
+<p><center> Arquivo /etc/hosts da VM1 e VM2 do PC2 </center></p>   
+   <img src="imagens/gabriel/hosts.png" alt=""
+	title="/etc/hosts"/>
+  
+<br>
 
-### Configuração do HostOnly
+<p><center> Arquivo /etc/hosts da VM1 e VM2 do PC3 </center></p>   
+   <img src="imagens/gabriel/hosts.png" alt=""
+	title="/etc/hosts"/>
+  
+<br>
+
+<p><center> Arquivo /etc/hosts da VM1 e VM2 do PC4 </center></p>   
+   <img src="imagens/gabriel/hosts.png" alt=""
+	title="/etc/hosts"/>
+
+## Configuração do HostOnly
 
 ## Testes de Ping e Acessso SSH
 
-###  Resultados dos testes de Ping e acesso SSH utilizando os usuários criados nas VMs e os nomes dos hosts.
+##  Resultados dos testes de Ping e acesso SSH utilizando os usuários criados nas VMs e os nomes dos hosts.
