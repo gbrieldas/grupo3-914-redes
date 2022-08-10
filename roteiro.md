@@ -1,9 +1,7 @@
 # Roteiro de Configuração e Execução
 
 ## Objetivo:
-* Configurar e executar um ambiente de rede virtualizado entre 8 VMs dispostas em 4 computadores distintos.
-* Exemplificar passo a passo as etapas realizadas desde a criação da VMs até as tentativas de comunicação entre as unidades da rede virtualizada.
-* Apresentação do roteiro em sala de aula.
+* Exemplificar o passo a passo das etapas realizadas para a configuração e execução do ambiente de rede virtualizada, desde a criação da VMs até as tentativas de comunicação entre as unidades da rede virtualizada, com os testes de Ping e SSH.
 
 ## Criação das VMs
 
