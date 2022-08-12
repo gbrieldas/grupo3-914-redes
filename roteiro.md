@@ -163,7 +163,7 @@ sudo nano /etc/netplan/01-netcfg.yaml
 <br>
 
 <p><center> Configuração da Interface de Rede das VMs do PC4 </center></p>   
-   <img src="imagens/gabriel/netplan.png" alt=""
+   <img src="imagens/gabriel/netplan4.png" alt=""
 	title="Arquivo 01-netcfg.yaml"/>
   
 * Aplicando as configuraçães:
