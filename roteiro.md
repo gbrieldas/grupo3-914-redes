@@ -109,22 +109,7 @@ sudo apt-get install openssh-server
 ```
 netstat -an | grep LISTEN.
 ```
-<p><center> Verificando o status das portas do sistema das VMs PC1</center></p>   
-   <img src="imagens/miguel/statusportas.png" alt=""
-	title="Arquivo netstat -an | grep LISTEN"/>
 
-<p><center> Verificando o status das portas do sistema das VMs PC2</center></p>   
-   <img src="imagens/miguel/statusportas.png" alt=""
-	title="Arquivo netstat -an | grep LISTEN"/>
-
-<p><center> Verificando o status das portas do sistema das VMs PC3</center></p>   
-   <img src="imagens/miguel/statusportas.png" alt=""
-	title="Arquivo netstat -an | grep LISTEN"/>
-
-<p><center> Verificando o status das portas do sistema das VMs PC</center></p>   
-   <img src="imagens/miguel/statusportas.png" alt=""
-	title="Arquivo netstat -an | grep LISTEN"/>
-	
 * Configurando o Firewall:
 ```
 sudo ufw allow ssh
@@ -199,46 +184,47 @@ sudo netplan apply
 <p><center> Configurando a Placa de Rede para Modo Bridge na VM1 e VM2 do PC1 </center></p>   
    <img src="imagens/gabriel/modo_bridge-VM1.png" alt=""
 	title="Modo Bridge"/>
-   <img src="imagens/gabriel/modo_bridge-VM1.png" alt=""
+   <img src="imagens/gabriel/modo_bridge-VM2.png" alt=""
 	title="Modo Bridge"/> 
 	
 <p><center> Configurando a Placa de Rede para Modo Bridge na VM1 e VM2 do PC2 </center></p>   
    <img src="imagens/gabriel/modo_bridge-VM1.png" alt=""
 	title="Modo Bridge"/>
-   <img src="imagens/gabriel/modo_bridge-VM1.png" alt=""
+   <img src="imagens/gabriel/modo_bridge-VM2.png" alt=""
 	title="Modo Bridge"/> 
 
-<p><center> Configurando a Placa de Rede para Modo Bridge na VM1 eVM2 do PC3 </center></p>   
+<p><center> Configurando a Placa de Rede para Modo Bridge na VM1 e VM2 do PC3 </center></p>   
    <img src="imagens/miguel/v1modobrigde.png" alt=""
 	title="Modo Bridge"/>
    <img src="imagens/miguel/vm2mobrigde.png" alt=""
 	title="Modo Bridge"/> 
 
-<p><center> Configurando a Placa de Rede para Modo Bridge na VM1 do PC4 </center></p>   
+<p><center> Configurando a Placa de Rede para Modo Bridge na VM1 e VM2 do PC2 </center></p>   
    <img src="imagens/gabriel/modo_bridge-VM1.png" alt=""
-	title="Modo Bridge"/> 
-   <img src="imagens/gabriel/modo_brigde-VM2.png" alt=""
-	title="Modo Bridge"/> 
+	title="Modo Bridge"/>
+   <img src="imagens/gabriel/modo_bridge-VM2.png" alt=""
+	title="Modo Bridge"/>
 
 ## Criacão dos usuários nas VMs
 ### Cada VM possui o usuário administrador, então criamos em cada VM mais 4 usuários com os nomes dos integrantes do grupo.
-* Para isso usamos o ``sudo adduser <usuario>``:
+* Para isso usamos o ``sudo adduser <usuario>``
+* Para visualizar os usuários criados, usamos o comando ``getent passwd``
 
 <p><center> Usuários criados nas VM1 e VM2 do PC1 </center></p>   
    <img src="" alt=""
-	title="ifconfig -a"/>
+	title="getent passwd"/>
 
 <p><center> Usuários criados nas VM1 e VM2 do PC2 </center></p>   
    <img src="" alt=""
-	title="ifconfig -a"/>
+	title="getent passwd"/>
 
 <p><center> Usuários criados nas VM1 e VM2 do PC3 </center></p>   
    <img src="" alt=""
-	title="ifconfig -a"/>
+	title="getent passwd"/>
 
 <p><center> Usuários criados nas VM1 e VM2 do PC4 </center></p>   
    <img src="" alt=""
-	title="ifconfig -a"/>
+	title="getent passwd"/>
 
 ## Configurando o serviço de nomes estático
 ```
