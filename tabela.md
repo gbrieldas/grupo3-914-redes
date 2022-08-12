@@ -17,7 +17,7 @@
 
 ## Máscara: 255.255.255.240
 ## IP Localhost: 192.168.14.32
-## IP Gateway4: 192.168.14.33
+## IP Gateway4: 192.168.14.34
 ## IP Broadcast: 192.168.14.47
 
 ### Observação: o Grupo 3 está usando a faixa de IP 192.168.14.[32-47]/28
