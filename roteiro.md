@@ -91,7 +91,7 @@ sudo hostnamectl set-hostname <hostname>
 <br>
 
 <p><center> Definindo o nome do hostname da VM1 e VM2 do PC3 </center></p>   
-   <img src="imagens/gabriel/hostname.png" alt=""
+   <img src="imagens/miguel/sudohostname.png" alt=""
 	title="Definindo o nome do hostname"/>
   
 <br>
@@ -157,7 +157,7 @@ sudo nano /etc/netplan/01-netcfg.yaml
 <br>
 
 <p><center> Configuração da Interface de Rede das VMs do PC3 </center></p>   
-   <img src="imagens/gabriel/netplan.png" alt=""
+   <img src="imagens/miguel/sudoNetplan.png" alt=""
 	title="Arquivo 01-netcfg.yaml"/>
   
 <br>
