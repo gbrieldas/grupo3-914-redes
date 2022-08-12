@@ -1,8 +1,7 @@
 # hostname
-# listen
 # netplan
 # ifconfig
 # modo bridge
-# usuarios
+# usuarios (getent passwd)
 # hosts
 # ssh ping
