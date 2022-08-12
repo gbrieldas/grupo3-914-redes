@@ -81,20 +81,14 @@ sudo hostnamectl set-hostname <hostname>
 <p><center> Definindo o nome do hostname da VM1 e VM2 do PC1 </center></p>   
    <img src="imagens/gabriel/hostname.png" alt=""
 	title="Definindo o nome do hostname"/>
-  
-<br>
 
 <p><center> Definindo o nome do hostname da VM1 e VM2 do PC2 </center></p>   
    <img src="imagens/gabriel/hostname.png" alt=""
 	title="Definindo o nome do hostname"/>
-  
-<br>
 
 <p><center> Definindo o nome do hostname da VM1 e VM2 do PC3 </center></p>   
    <img src="imagens/miguel/sudohostname.png" alt=""
 	title="Definindo o nome do hostname"/>
-  
-<br>
 
 <p><center> Definindo o nome do hostname da VM1 e VM2 do PC4 </center></p>   
    <img src="imagens/gabriel/hostname.png" alt=""
@@ -133,7 +127,7 @@ netstat -an | grep LISTEN.
 	
 * Configurando o Firewall:
 ```
-sudo ufw allow ssh.
+sudo ufw allow ssh
 sudo ufw enable
 ```
 
@@ -163,20 +157,14 @@ sudo nano /etc/netplan/01-netcfg.yaml
 <p><center> Configuração da Interface de Rede das VMs do PC1 </center></p>   
    <img src="imagens/gabriel/netplan.png" alt=""
 	title="Arquivo 01-netcfg.yaml"/>
-  
-<br>
 
 <p><center> Configuração da Interface de Rede das VMs do PC2 </center></p>   
    <img src="imagens/gabriel/netplan.png" alt=""
 	title="Arquivo 01-netcfg.yaml"/>
-  
-<br>
 
 <p><center> Configuração da Interface de Rede das VMs do PC3 </center></p>   
    <img src="imagens/miguel/sudoNetplan.png" alt=""
 	title="Arquivo 01-netcfg.yaml"/>
-  
-<br>
 
 <p><center> Configuração da Interface de Rede das VMs do PC4 </center></p>   
    <img src="imagens/gabriel/netplan.png" alt=""
@@ -192,20 +180,14 @@ sudo netplan apply
 <p><center> Configuração da Interface de Rede das VM1 e VM2 do PC1 </center></p>   
    <img src="imagens/luiza/ifconfig.png" alt=""
 	title="ifconfig -a"/>
-  
-<br>
 
 <p><center> Configuração da Interface de Rede as VM1 e VM2 do PC2 </center></p>   
    <img src="imagens/luiza/ifconfig.png" alt=""
 	title="ifconfig -a"/>
-  
-<br>
 
 <p><center> Configuração da Interface de Rede as VM1 e VM2 do PC3 </center></p>   
    <img src="imagens/miguel/ifconfig.png" alt=""
 	title="ifconfig -a"/>
-  
-<br>
 
 <p><center> Configuração da Interface de Rede as VM1 e VM2 do PC4 </center></p>   
    <img src="imagens/gabriel/ifconfig.png" alt=""
@@ -245,20 +227,14 @@ sudo netplan apply
 <p><center> Usuários criados nas VM1 e VM2 do PC1 </center></p>   
    <img src="" alt=""
 	title="ifconfig -a"/>
-  
-<br>
 
 <p><center> Usuários criados nas VM1 e VM2 do PC2 </center></p>   
    <img src="" alt=""
 	title="ifconfig -a"/>
-  
-<br>
 
 <p><center> Usuários criados nas VM1 e VM2 do PC3 </center></p>   
    <img src="" alt=""
 	title="ifconfig -a"/>
-  
-<br>
 
 <p><center> Usuários criados nas VM1 e VM2 do PC4 </center></p>   
    <img src="" alt=""
@@ -287,20 +263,15 @@ sudo nano /etc/hosts
 <p><center> Arquivo /etc/hosts da VM1 e VM2 do PC1 </center></p>   
    <img src="imagens/gabriel/hosts.png" alt=""
 	title="/etc/hosts"/>
-  
-<br>
 
 <p><center> Arquivo /etc/hosts da VM1 e VM2 do PC2 </center></p>   
    <img src="imagens/gabriel/hosts.png" alt=""
 	title="/etc/hosts"/>
-  
-<br>
+
 
 <p><center> Arquivo /etc/hosts da VM1 e VM2 do PC3 </center></p>   
    <img src="imagens/gabriel/hosts.png" alt=""
 	title="/etc/hosts"/>
-  
-<br>
 
 <p><center> Arquivo /etc/hosts da VM1 e VM2 do PC4 </center></p>   
    <img src="imagens/gabriel/hosts.png" alt=""
@@ -308,7 +279,48 @@ sudo nano /etc/hosts
 
 ## Configuração do HostOnly
 ### Configurando o acesso remoto às uma VM da rede pelo terminal do PC via ssh
+
+### Configurando o HostOnly na VirtualBox
 * Nesta etapa criamos uma interface no computador para comunicação entre o Host (PC) e a VM.
+* Clicar em ``Arquivo``->``Host Network Manager``:
+<p><center> Virtualbox Network Manager </center></p>   
+   <img src="imagens/gabriel/vboxnet.png" alt=""
+	title="Virtualbox Network Manager"/>
+
+<p><center> Configurando o servidor DHCP no adaptador VBoxNet0 </center></p>   
+   <img src="imagens/gabriel/dhcp.png" alt=""
+	title="Configurando o servidor DHCP no adaptador VBoxNet0"/>
+
+* Verificando a configuração das interfaces e a existência da interface ``vboxnet0`` usando o ``Terminal`` do PC:
+```
+ifconfig -a       # verifique a existência da interface ``vboxnet0``
+```
+* Adicionar um adaptador (HostOnly) na VM1 no PC4 para dar acesso a ela via rede pelo ``Terminal`` do PC:
+<p><center> Adapatador 2 em modo Host-Only </center></p>   
+   <img src="imagens/gabriel/adaptador2.png" alt=""
+	title="Adaptador 2 da VM1 do PC4"/>
+
+### Configurações da Interface na VM1 do PC4 para o servidor DHCP
+* Ative o DHCP para o Adaptador 2 (enp0s8):
+```
+sudo nano /etc/netplan/01-netcfg.yaml
+```
+<p><center> Editando o arquivo 01-netcfg.yaml da VM1 do PC4 </center></p>   
+   <img src="imagens/gabriel/enp0s8.png" alt=""
+	title="01-netcfg.yaml"/>	
+
+* Ativando as configurações:
+```
+sudo netplan apply
+```
+
+* Verificando se o IP pegou na nova interface de rede:
+```
+ifconfig -a
+```
+<p><center> IFCONFIG da VM1 do PC4 </center></p>   
+   <img src="imagens/gabriel/ifconfig2.png" alt=""
+	title="ifconfig -a"/>
 
 ## Testes de Ping e Acessso SSH
 
