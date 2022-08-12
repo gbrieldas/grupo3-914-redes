@@ -28,7 +28,7 @@ sudo mkdir VM
 cd VM
 sudo mkdir 914
 cd 914
-sudo mkdir Gabriel
+sudo mkdir <Estudante>
 ```
 
 ### Usuários e Permissões
