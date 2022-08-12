@@ -186,7 +186,7 @@ sudo netplan apply
 <br>
 
 <p><center> Configuração da Interface de Rede as VM1 e VM2 do PC3 </center></p>   
-   <img src="imagens/miguel/ifconfig.png" alt=""
+   <img src="imagens/luiza/ifconfig.png" alt=""
 	title="ifconfig -a"/>
   
 <br>
@@ -261,7 +261,7 @@ sudo nano /etc/hosts
 <br>
 
 <p><center> Arquivo /etc/hosts da VM1 e VM2 do PC3 </center></p>   
-   <img src="imagens/miguel/hosts2.png" alt=""
+   <img src="imagens/gabriel/hosts.png" alt=""
 	title="/etc/hosts"/>
   
 <br>
@@ -271,6 +271,8 @@ sudo nano /etc/hosts
 	title="/etc/hosts"/>
 
 ## Configuração do HostOnly
+### Configurando o acesso remoto às uma VM da rede pelo terminal do PC via ssh
+* Nesta etapa criamos uma interface no computador para comunicação entre o Host (PC) e a VM.
 
 ## Testes de Ping e Acessso SSH
 
