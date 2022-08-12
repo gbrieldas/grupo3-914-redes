@@ -256,7 +256,7 @@ sudo nano /etc/hosts
 
 
 <p><center> Arquivo /etc/hosts da VM1 e VM2 do PC3 </center></p>   
-   <img src="imagens/gabriel/hosts.png" alt=""
+   <img src="imagens/miguel/hosts2.png" alt=""
 	title="/etc/hosts"/>
 
 <p><center> Arquivo /etc/hosts da VM1 e VM2 do PC4 </center></p>   
