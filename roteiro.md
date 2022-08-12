@@ -173,26 +173,26 @@ sudo netplan apply
  
 * Configuração da Interface de Rede das VMs através do ``ifconfig -a``:
 
-<p><center> Configuração da Interface de Rede das VM1 do PC1 </center></p>   
+<p><center> Configuração da Interface de Rede das VM1 e VM2 do PC1 </center></p>   
    <img src="imagens/luiza/ifconfig.png" alt=""
 	title="ifconfig -a"/>
   
 <br>
 
-<p><center> Configuração da Interface de Rede das VM1 do PC3 </center></p>   
+<p><center> Configuração da Interface de Rede as VM1 e VM2 do PC2 </center></p>   
    <img src="imagens/luiza/ifconfig.png" alt=""
 	title="ifconfig -a"/>
   
 <br>
 
-<p><center> Configuração da Interface de Rede das VM2 do PC3 </center></p>   
+<p><center> Configuração da Interface de Rede as VM1 e VM2 do PC3 </center></p>   
    <img src="imagens/luiza/ifconfig.png" alt=""
 	title="ifconfig -a"/>
   
 <br>
 
-<p><center> Configuração da Interface de Rede das VM2 do PC4 </center></p>   
-   <img src="imagens/luiza/ifconfig.png" alt=""
+<p><center> Configuração da Interface de Rede as VM1 e VM2 do PC4 </center></p>   
+   <img src="imagens/gabriel/ifconfig.png" alt=""
 	title="ifconfig -a"/>
 
 ### Configurando a Placa de Rede para Modo Bridge:
