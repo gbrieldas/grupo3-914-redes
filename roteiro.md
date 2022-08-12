@@ -163,7 +163,7 @@ sudo nano /etc/netplan/01-netcfg.yaml
 <br>
 
 <p><center> Configuração da Interface de Rede das VMs do PC4 </center></p>   
-   <img src="imagens/gabriel/netplan4.png" alt=""
+   <img src="imagens/gabriel/netplan.png" alt=""
 	title="Arquivo 01-netcfg.yaml"/>
   
 * Aplicando as configuraçães:
@@ -186,7 +186,7 @@ sudo netplan apply
 <br>
 
 <p><center> Configuração da Interface de Rede as VM1 e VM2 do PC3 </center></p>   
-   <img src="imagens/luiza/ifconfig.png" alt=""
+   <img src="imagens/miguel/ifconfig.png" alt=""
 	title="ifconfig -a"/>
   
 <br>
@@ -198,9 +198,29 @@ sudo netplan apply
 ### Configurando a Placa de Rede para Modo Bridge:
 * Nesta etapa configuramos a placa de redes no Adaptador 1 em todas as VMs para o Modo Bridgo, assim como a imagem abaixo mostra:
 
-<p><center> Configurando a Placa de Rede para Modo Bridge na VM1 do PC4 </center></p>   
+<p><center> Configurando a Placa de Rede para Modo Bridge na VM1 e VM2 do PC1 </center></p>   
    <img src="imagens/gabriel/modo_bridge-VM1.png" alt=""
 	title="Modo Bridge"/>
+   <img src="imagens/gabriel/modo_bridge-VM1.png" alt=""
+	title="Modo Bridge"/> 
+	
+<p><center> Configurando a Placa de Rede para Modo Bridge na VM1 e VM2 do PC2 </center></p>   
+   <img src="imagens/gabriel/modo_bridge-VM1.png" alt=""
+	title="Modo Bridge"/>
+   <img src="imagens/gabriel/modo_bridge-VM1.png" alt=""
+	title="Modo Bridge"/> 
+
+<p><center> Configurando a Placa de Rede para Modo Bridge na VM1 eVM2 do PC3 </center></p>   
+   <img src="imagens/miguel/v1modobrigde.png" alt=""
+	title="Modo Bridge"/>
+   <img src="imagens/miguel/vm2mobrigde.png" alt=""
+	title="Modo Bridge"/> 
+
+<p><center> Configurando a Placa de Rede para Modo Bridge na VM1 do PC4 </center></p>   
+   <img src="imagens/gabriel/modo_bridge-VM1.png" alt=""
+	title="Modo Bridge"/> 
+   <img src="imagens/gabriel/modo_brigde-VM2.png" alt=""
+	title="Modo Bridge"/> 
 
 ## Criacão dos usuários nas VMs
 ### Cada VM possui o usuário administrador, então criamos em cada VM mais 4 usuários com os nomes dos integrantes do grupo.
