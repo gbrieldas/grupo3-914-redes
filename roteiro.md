@@ -115,6 +115,22 @@ sudo apt-get install openssh-server
 ```
 netstat -an | grep LISTEN.
 ```
+<p><center> Verificando o status das portas do sistema das VMs PC1</center></p>   
+   <img src="imagens/miguel/statusportas.png" alt=""
+	title="Arquivo netstat -an | grep LISTEN"/>
+
+<p><center> Verificando o status das portas do sistema das VMs PC2</center></p>   
+   <img src="imagens/miguel/statusportas.png" alt=""
+	title="Arquivo netstat -an | grep LISTEN"/>
+
+<p><center> Verificando o status das portas do sistema das VMs PC3</center></p>   
+   <img src="imagens/miguel/statusportas.png" alt=""
+	title="Arquivo netstat -an | grep LISTEN"/>
+
+<p><center> Verificando o status das portas do sistema das VMs PC</center></p>   
+   <img src="imagens/miguel/statusportas.png" alt=""
+	title="Arquivo netstat -an | grep LISTEN"/>
+	
 * Configurando o Firewall:
 ```
 sudo ufw allow ssh.
