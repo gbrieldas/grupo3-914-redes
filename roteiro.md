@@ -79,11 +79,11 @@ sudo hostnamectl set-hostname <hostname>
 ```
 
 <p><center> Definindo o nome do hostname da VM1 e VM2 do PC1 </center></p>   
-   <img src="imagens/gabriel/hostname.png" alt=""
+   <img src="imagens/Luiza/host.png" alt=""
 	title="Definindo o nome do hostname"/>
 
 <p><center> Definindo o nome do hostname da VM1 e VM2 do PC2 </center></p>   
-   <img src="imagens/gabriel/hostname.png" alt=""
+   <img src="imagens/ty/hostnamety.png" alt=""
 	title="Definindo o nome do hostname"/>
 
 <p><center> Definindo o nome do hostname da VM1 e VM2 do PC3 </center></p>   
@@ -140,11 +140,11 @@ sudo nano /etc/netplan/01-netcfg.yaml
 ```
 
 <p><center> Configuração da Interface de Rede das VMs do PC1 </center></p>   
-   <img src="imagens/gabriel/netplan.png" alt=""
+   <img src="imagens/Luiza/IPs.png" alt=""
 	title="Arquivo 01-netcfg.yaml"/>
 
 <p><center> Configuração da Interface de Rede das VMs do PC2 </center></p>   
-   <img src="imagens/gabriel/netplan.png" alt=""
+   <img src="imagens/ty/NETCONFIGTY.png" alt=""
 	title="Arquivo 01-netcfg.yaml"/>
 
 <p><center> Configuração da Interface de Rede das VMs do PC3 </center></p>   
@@ -163,11 +163,11 @@ sudo netplan apply
 * Configuração da Interface de Rede das VMs através do ``ifconfig -a``:
 
 <p><center> Configuração da Interface de Rede das VM1 e VM2 do PC1 </center></p>   
-   <img src="imagens/luiza/ifconfig.png" alt=""
+   <img src="imagens/Luiza/ifconfig.png" alt=""
 	title="ifconfig -a"/>
 
 <p><center> Configuração da Interface de Rede as VM1 e VM2 do PC2 </center></p>   
-   <img src="imagens/luiza/ifconfig.png" alt=""
+   <img src="imagens/ty/IFCONFIG.png" alt=""
 	title="ifconfig -a"/>
 
 <p><center> Configuração da Interface de Rede as VM1 e VM2 do PC3 </center></p>   
@@ -182,15 +182,15 @@ sudo netplan apply
 * Nesta etapa configuramos a placa de redes no Adaptador 1 em todas as VMs para o Modo Bridgo, assim como a imagem abaixo mostra:
 
 <p><center> Configurando a Placa de Rede para Modo Bridge na VM1 e VM2 do PC1 </center></p>   
-   <img src="imagens/gabriel/modo_bridge-VM1.png" alt=""
+   <img src="imagens/Luiza/modo bridge - vm1.png" alt=""
 	title="Modo Bridge"/>
-   <img src="imagens/gabriel/modo_bridge-VM2.png" alt=""
+   <img src="imagens/Luiza/modo bridge - vm2.png" alt=""
 	title="Modo Bridge"/> 
 	
 <p><center> Configurando a Placa de Rede para Modo Bridge na VM1 e VM2 do PC2 </center></p>   
-   <img src="imagens/gabriel/modo_bridge-VM1.png" alt=""
+   <img src="imagens/ty/MODOBRIDGE.png" alt=""
 	title="Modo Bridge"/>
-   <img src="imagens/gabriel/modo_bridge-VM2.png" alt=""
+   <img src="imagens/ty/MODOBRIDGE.png" alt=""
 	title="Modo Bridge"/> 
 
 <p><center> Configurando a Placa de Rede para Modo Bridge na VM1 e VM2 do PC3 </center></p>   
@@ -211,11 +211,11 @@ sudo netplan apply
 * Para visualizar os usuários criados, usamos o comando ``getent passwd``
 
 <p><center> Usuários criados nas VM1 e VM2 do PC1 </center></p>   
-   <img src="" alt=""
+   <img src="imagens/Luiza/usergetent.png" alt=""
 	title="getent passwd"/>
 
 <p><center> Usuários criados nas VM1 e VM2 do PC2 </center></p>   
-   <img src="" alt=""
+   <img src="imagens/ty/usuarios.png" alt=""
 	title="getent passwd"/>
 
 <p><center> Usuários criados nas VM1 e VM2 do PC3 </center></p>   
@@ -247,11 +247,11 @@ sudo nano /etc/hosts
 ```
 
 <p><center> Arquivo /etc/hosts da VM1 e VM2 do PC1 </center></p>   
-   <img src="imagens/gabriel/hosts.png" alt=""
+   <img src="imagens/Luiza/nomes estaticos.png" alt=""
 	title="/etc/hosts"/>
 
 <p><center> Arquivo /etc/hosts da VM1 e VM2 do PC2 </center></p>   
-   <img src="imagens/gabriel/hosts.png" alt=""
+   <img src="imagens/ty/etchosts.png" alt=""
 	title="/etc/hosts"/>
 
 
