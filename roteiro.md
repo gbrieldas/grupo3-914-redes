@@ -308,6 +308,22 @@ ifconfig -a
    <img src="imagens/hostonly/ifconfighostonly.png" alt=""
 	title="ifconfig -a"/>
 
-## Testes de Ping e Acessso SSH
+## Fiação
+<img src="imagens/conexões/IMG_20220826_080233.jpg" alt=""
+	title="ifconfig -a"/>
+<img src="imagens/conexões/IMG_20220826_080238.jpg" alt=""
+	title="ifconfig -a"/>
+<img src="imagens/conexões/IMG_20220826_080243.jpg" alt=""
+	title="ifconfig -a"/>
+<img src="imagens/conexões/IMG_20220826_080236.jpg" alt=""
+	title="ifconfig -a"/>
+
+## Acesso SSH
+* Instalando o SSH Server no ``Terminal``:
+```
+sudo apt-get install openssh-server
+```
+
+## Testes de Ping
 
 ##  Resultados dos testes de Ping e acesso SSH utilizando os usuários criados nas VMs e os nomes dos hosts.
