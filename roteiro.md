@@ -324,6 +324,40 @@ ifconfig -a
 sudo apt-get install openssh-server
 ```
 
+* Acessando a VM1 do PC1 a partir do ``Terminal``:
+```
+ssh administrador@192.168.56.100
+```
+<p><center> Acesso SSH </center></p>   
+   <img src="imagens/comunicações/hostonly.png" alt=""
+	title="ssh administrador@192.168.56.100"/>
+
 ## Testes de Ping
+* Estabelecendo conexões entre as VMs da rede:
+```
+ping <ip>
+```
+
+<p><center> Teste de Ping entre a VM1 e VM2 do PC1 </center></p>   
+   <img src="imagens/comunicações/vm1-pc1 vm2-pc1.png" alt=""
+	title="ping 192.168.14.35"/>
+<p><center> Teste de Ping entre a VM1 do PC1 para a VM1 do PC2 </center></p>   
+   <img src="imagens/comunicações/vm1-pc1 vm1-pc2.png" alt=""
+	title="ping 192.168.14.36"/>
+<p><center> Teste de Ping entre a VM1 do PC1 para a VM2 do PC2 </center></p>   
+   <img src="imagens/comunicações/vm1-pc1 vm2-pc2.png" alt=""
+	title="ping 192.168.14.37"/>
+<p><center> Teste de Ping entre a VM1 do PC1 para a VM1 do PC3 </center></p>   
+   <img src="imagens/comunicações/vm1-pc1 vm1-pc3.png" alt=""
+	title="ping 192.168.14.38"/>
+<p><center> Teste de Ping entre a VM1 do PC1 para a VM2 do PC3 </center></p>   
+   <img src="imagens/comunicações/vm1-pc1 vm2pc3.png" alt=""
+	title="ping 192.168.14.39"/>
+<p><center> Teste de Ping entre a VM1 do PC1 para a VM1 do PC4 </center></p>   
+   <img src="imagens/comunicações/vm1-pc1 vm1-pc4.png" alt=""
+	title="ping 192.168.14.40"/>
+<p><center> Teste de Ping entre a VM1 do PC1 para a VM2 do PC4 </center></p>   
+   <img src="imagens/comunicações/vm1-pc1 vm2-pc4.png" alt=""
+	title="ping 192.168.14.41"/>
 
 ##  Resultados dos testes de Ping e acesso SSH utilizando os usuários criados nas VMs e os nomes dos hosts.
