@@ -219,11 +219,11 @@ sudo netplan apply
 	title="getent passwd"/>
 
 <p><center> Usuários criados nas VM1 e VM2 do PC3 </center></p>   
-   <img src="imagens/gabriel/usuariosgab.png" alt=""
+   <img src="imagens/miguel/usuarios.png" alt=""
 	title="getent passwd"/>
 
 <p><center> Usuários criados nas VM1 e VM2 do PC4 </center></p>   
-   <img src="" alt=""
+   <img src="imagens/gabriel/usuariosgab.png" alt=""
 	title="getent passwd"/>
 
 ## Configurando o serviço de nomes estático
