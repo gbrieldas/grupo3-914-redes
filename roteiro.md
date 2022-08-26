@@ -270,29 +270,29 @@ sudo nano /etc/hosts
 * Nesta etapa criamos uma interface no computador para comunicação entre o Host (PC) e a VM.
 * Clicar em ``Arquivo``->``Host Network Manager``:
 <p><center> Virtualbox Network Manager </center></p>   
-   <img src="imagens/gabriel/vboxnet.png" alt=""
+   <img src="imagens/hostonly/adaptador.png" alt=""
 	title="Virtualbox Network Manager"/>
 
 <p><center> Configurando o servidor DHCP no adaptador VBoxNet0 </center></p>   
-   <img src="imagens/gabriel/dhcp.png" alt=""
+   <img src="imagens/hostonly/dhcp.png" alt=""
 	title="Configurando o servidor DHCP no adaptador VBoxNet0"/>
 
 * Verificando a configuração das interfaces e a existência da interface ``vboxnet0`` usando o ``Terminal`` do PC:
 ```
 ifconfig -a       # verifique a existência da interface ``vboxnet0``
 ```
-* Adicionar um adaptador (HostOnly) na VM1 no PC4 para dar acesso a ela via rede pelo ``Terminal`` do PC:
+* Adicionar um adaptador (HostOnly) na VM1 no PC1 para dar acesso a ela via rede pelo ``Terminal`` do PC:
 <p><center> Adapatador 2 em modo Host-Only </center></p>   
-   <img src="imagens/gabriel/adaptador2.png" alt=""
-	title="Adaptador 2 da VM1 do PC4"/>
+   <img src="imagens/hostonly/adaptador2.png" alt=""
+	title="Adaptador 2 da VM1 do PC1"/>
 
-### Configurações da Interface na VM1 do PC4 para o servidor DHCP
+### Configurações da Interface na VM1 do PC1 para o servidor DHCP
 * Ative o DHCP para o Adaptador 2 (enp0s8):
 ```
 sudo nano /etc/netplan/01-netcfg.yaml
 ```
-<p><center> Editando o arquivo 01-netcfg.yaml da VM1 do PC4 </center></p>   
-   <img src="imagens/gabriel/enp0s8.png" alt=""
+<p><center> Editando o arquivo 01-netcfg.yaml da VM1 do PC1 </center></p>   
+   <img src="imagens/hostonly/netplan.png" alt=""
 	title="01-netcfg.yaml"/>	
 
 * Ativando as configurações:
@@ -304,8 +304,8 @@ sudo netplan apply
 ```
 ifconfig -a
 ```
-<p><center> IFCONFIG da VM1 do PC4 </center></p>   
-   <img src="imagens/gabriel/ifconfig2.png" alt=""
+<p><center> IFCONFIG da VM1 do PC1 </center></p>   
+   <img src="imagens/hostonly/ifconfighostonly.png" alt=""
 	title="ifconfig -a"/>
 
 ## Testes de Ping e Acessso SSH
