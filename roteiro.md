@@ -315,7 +315,7 @@ ifconfig -a
 	title="ifconfig -a"/>
 <img src="imagens/conexões/IMG_20220826_080243.jpg" alt=""
 	title="ifconfig -a"/>
-<img src="imagens/conexões/IMG_20220826_080236.jpg" alt=""
+<img src="imagens/conexões/IMG_20220826_080436.jpg" alt=""
 	title="ifconfig -a"/>
 
 ## Acesso SSH
