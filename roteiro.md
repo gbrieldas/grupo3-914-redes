@@ -7,7 +7,7 @@
 
 ### Criação de Diretórios
 #### Criação dos diretórios que comportaram a imagem OVA e a VMs.
-* Logar no usuário ``redes`` com a senha ``admin@Lab92``:
+* Logar no usuário ``redes``:
 ```
 su redes
 ```
@@ -179,7 +179,9 @@ sudo netplan apply
 	title="ifconfig -a"/>
 
 ### Configurando a Placa de Rede para Modo Bridge:
-* Nesta etapa configuramos a placa de redes no Adaptador 1 em todas as VMs para o Modo Bridgo, assim como a imagem abaixo mostra:
+* Nesta etapa configuramos a placa de redes no Adaptador 1 em todas as VMs para o Modo Bridge, assim como a imagem abaixo mostra:
+* Não esqueça de atualizar o endereço MAC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
 <p><center> Configurando a Placa de Rede para Modo Bridge na VM1 e VM2 do PC1 </center></p>   
    <img src="imagens/Luiza/modo bridge - vm1.png" alt=""
