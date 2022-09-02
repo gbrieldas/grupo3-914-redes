@@ -71,6 +71,23 @@ sudo apt install virtualbox-ext-pack
 sudo apt install net-tools -y
 ```
 
+## Configuração da Interface de Rede
+
+```
+------------------------------------------------------------------------------------------------------------
+|  DESCRICAO  |       IP         |      hostname     |               FQDN               |      aliase      |
+------------------------------------------------------------------------------------------------------------
+| VM1-PC1     | 192.168.14.34    |   srv-vm1-pc1     | vm01-pc1.grupo3-914.ifalara.net  |       vpn        |
+| VM2-PC1     | 192.168.14.35    |   srv-vm2-pc1     | vm02-pc1.grupo3-914.ifalara.net  |       mail       |
+| VM1-PC2     | 192.168.14.36    |   srv-vm1-pc2     | vm01-pc2.grupo3-914.ifalara.net  |       www        |
+| VM2-PC2     | 192.168.14.37    |   srv-vm2-pc2     | vm02-pc2.grupo3-914.ifalara.net  |       file       |
+| VM1-PC3     | 192.168.14.38    |   srv-vm1-pc3     | vm01-pc3.grupo3-914.ifalara.net  |       sql        |
+| VM2-PC3     | 192.168.14.39    |   srv-vm2-pc3     | vm02-pc3.grupo3-914.ifalara.net  |       mint       |
+| VM1-PC4     | 192.168.14.40    |   srv-vm1-pc4     | vm01-pc4.grupo3-914.ifalara.net  |       beans      |
+| VM2-PC4     | 192.168.14.41    |   srv-vm2-pc4     | vm02-pc4.grupo3-914.ifalara.net  |       url        |
+------------------------------------------------------------------------------------------------------------
+```
+
 ## SSH-Server
 
 ### Atribuindo nome aos servidores ``hostname``, seguindo a tabela das VMs:
@@ -114,23 +131,6 @@ netstat -an | grep LISTEN.
 ```
 sudo ufw allow ssh
 sudo ufw enable
-```
-
-## Configuração da Interface de Rede
-
-```
-------------------------------------------------------------------------------------------------------------
-|  DESCRICAO  |       IP         |      hostname     |               FQDN               |      aliase      |
-------------------------------------------------------------------------------------------------------------
-| VM1-PC1     | 192.168.14.34    |   srv-vm1-pc1     | vm01-pc1.grupo3-914.ifalara.net  |       vpn        |
-| VM2-PC1     | 192.168.14.35    |   srv-vm2-pc1     | vm02-pc1.grupo3-914.ifalara.net  |       mail       |
-| VM1-PC2     | 192.168.14.36    |   srv-vm1-pc2     | vm01-pc2.grupo3-914.ifalara.net  |       www        |
-| VM2-PC2     | 192.168.14.37    |   srv-vm2-pc2     | vm02-pc2.grupo3-914.ifalara.net  |       file       |
-| VM1-PC3     | 192.168.14.38    |   srv-vm1-pc3     | vm01-pc3.grupo3-914.ifalara.net  |       sql        |
-| VM2-PC3     | 192.168.14.39    |   srv-vm2-pc3     | vm02-pc3.grupo3-914.ifalara.net  |       mint       |
-| VM1-PC4     | 192.168.14.40    |   srv-vm1-pc4     | vm01-pc4.grupo3-914.ifalara.net  |       beans      |
-| VM2-PC4     | 192.168.14.41    |   srv-vm2-pc4     | vm02-pc4.grupo3-914.ifalara.net  |       url        |
-------------------------------------------------------------------------------------------------------------
 ```
 
 ### Configurar o IP Estático na Interface de Rede
@@ -182,7 +182,6 @@ sudo netplan apply
 * Nesta etapa configuramos a placa de redes no Adaptador 1 em todas as VMs para o Modo Bridge, assim como a imagem abaixo mostra:
 * Não esqueça de atualizar o endereço MAC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-
 <p><center> Configurando a Placa de Rede para Modo Bridge na VM1 e VM2 do PC1 </center></p>   
    <img src="imagens/Luiza/modo bridge - vm1.png" alt=""
 	title="Modo Bridge"/>
@@ -209,7 +208,19 @@ sudo netplan apply
 
 ## Criacão dos usuários nas VMs
 ### Cada VM possui o usuário administrador, então criamos em cada VM mais 4 usuários com os nomes dos integrantes do grupo.
-* Para isso usamos o ``sudo adduser <usuario>``
+* Para isso usamos o ``sudo adduser <usuario>`` de acordo com a tabela abaixo:
+
+```
+-------------------------------------------------------------------------------------------------
+|  VM1-PC1  |  VM2-PC1  |  VM1-PC2  |  VM2-PC2  |  VM1-PC3  |  VM2-PC3  |  VM1-PC4  |  VM2-PC4  |
+-------------------------------------------------------------------------------------------------
+|   luiza   |   luiza   |   luiza   |   luiza   |   luiza   |   luiza   |   luiza   |   luiza   |
+|  rityelle |  rityelle |  rityelle |  rityelle |  rityelle |  rityelle |  rityelle |  rityelle |
+|   miguel  |   miguel  |   miguel  |   miguel  |   miguel  |   miguel  |   miguel  |   miguel  |
+|  gabriel  |  gabriel  |  gabriel  |  gabriel  |  gabriel  |  gabriel  |  gabriel  |  gabriel  |
+-------------------------------------------------------------------------------------------------
+```
+
 * Para visualizar os usuários criados, usamos o comando ``getent passwd``
 
 <p><center> Usuários criados nas VM1 e VM2 do PC1 </center></p>   
@@ -283,6 +294,10 @@ sudo nano /etc/hosts
 ```
 ifconfig -a       # verifique a existência da interface ``vboxnet0``
 ```
+<p><center> Verificando a existência da interface criada no ``Terminal`` do PC1 </center></p>   
+   <img src="imagens/hostonly/dhcp.png" alt=""
+	title="Configurando o servidor DHCP no adaptador VBoxNet0"/>
+
 * Adicionar um adaptador (HostOnly) na VM1 no PC1 para dar acesso a ela via rede pelo ``Terminal`` do PC:
 <p><center> Adapatador 2 em modo Host-Only </center></p>   
    <img src="imagens/hostonly/adaptador2.png" alt=""
@@ -355,11 +370,16 @@ ping <ip>
 <p><center> Teste de Ping entre a VM1 do PC1 para a VM2 do PC3 </center></p>   
    <img src="imagens/comunicações/vm1-pc1 vm2pc3.png" alt=""
 	title="ping 192.168.14.39"/>
-<p><center> Teste de Ping entre a VM1 do PC1 para a VM1 do PC4 </center></p>   
-   <img src="imagens/comunicações/vm1-pc1 vm1-pc4.png" alt=""
-	title="ping 192.168.14.40"/>
 <p><center> Teste de Ping entre a VM1 do PC1 para a VM2 do PC4 </center></p>   
    <img src="imagens/comunicações/vm1-pc1 vm2-pc4.png" alt=""
 	title="ping 192.168.14.41"/>
-
-##  Resultados dos testes de Ping e acesso SSH utilizando os usuários criados nas VMs e os nomes dos hosts.
+<p><center> Teste de Ping entre a VM1 do PC2 para a VM1 do PC4 via usuário Gabriel</center></p>   
+   <img src="imagens/Luiza/Captura de tela de 2022-09-02 10-51-19.png" alt=""/>
+<p><center> Acesso SSH entre o usuario Luiza da VM2 do PC3 para o usuario Gabriel da VM1 do PC2</center></p>   
+   <img src="imagens/Luiza/Captura de tela de 2022-09-02 10-51-07.png" alt=""/>
+<p><center> Acesso SSH entre o usuario Luiza da VM2 do PC2 para o usuario Luiza da VM2 do PC3 via aliase mint</center></p>   
+   <img src="imagens/Luiza/Captura de tela de 2022-09-02 10-50-43.png" alt=""/>
+<p><center> Acesso SSH entre o usuario Luiza da VM2 do PC3 para o usuario Gabriel da VM1 do PC2 via hostname srv-vm1-pc2</center></p>   
+   <img src="imagens/Luiza/Captura de tela de 2022-09-02 10-50-43.png" alt=""/>
+<p><center> cat /etc/hosts </center></p> 
+   <img src="imagens/Luiza/Captura de tela de 2022-09-02 10-50-43.png" alt=""/>
